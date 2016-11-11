@@ -99,6 +99,7 @@ export const DFPManager = Object.assign(new EventEmitter(), {
 
       googletag.cmd.push(() => {
         googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
         googletag.enableServices();
         Object.keys(availableSlots).forEach((_slotId) => {
           if (availableSlots.hasOwnProperty(_slotId)) {
